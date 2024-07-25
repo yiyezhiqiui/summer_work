@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.2)
+project(picture)
+file(GLOB SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
+find_package(OpenCV)
+add_executable(test ${SRC})
+target_link_libraries(test ${OpenCV_LIBS})
